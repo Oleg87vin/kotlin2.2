@@ -1,5 +1,3 @@
-import java.util.*
-
 fun main() {
 
     var likes: Int = 0
@@ -8,14 +6,12 @@ fun main() {
 
     println("Ведите количество лайков")
 
-    val scan = Scanner(System.`in`)
+    likes = readln().toInt()
 
-    likes = scan.nextLine().toInt()
+    val reducedLikes = likes % 100
 
-
-    if ((likes > 1) && (likes % 10 != 1))
+    if ((likes % 10 != 1) || (likes % 100 == 11))
         println("Понравилось $likes $lud")
     else println("Понравилось $likes $chel")
+    println(reducedLikes)
 }
-
-
